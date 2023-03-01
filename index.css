@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Hanken Grotesk", sans-serif;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+:root{
+    /*colors for summary items*/
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /*gradients*/
+    --light-slate-blue: #6743ff;
+    --light-royal-blue: #312bed;
+    --violet-blue: #4e21ca;
+    --results-container-linear-gradient: linear-gradient(#6743ff,#312bed);
+    --results-score-linear-gradient: linear-gradient(#4e21ca,#312bed);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*neutral colors*/
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /*Use transparency to get the colour variations necessary to 
+    match the design. Hint: look into using `hsla()`.*/
+
+    /*font stuff*/
+    --font-size-paragraph: 1.125;
+    --font-family-hanken-grotesk: "Hanken Grotesk", sans-serif;
+    --font-weight-small: 500;
+    --font-weight-medium: 700;
+    --font-weight-large: 800;
+
+}
+*{
+    /*Boilerplate styles*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-hanken-grotesk);
+
+    text-align: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*RESULT CONTAINER*/
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0 0 1.25rem 1.25rem;
+    background: var(--results-container-linear-gradient);
+    padding: 1rem;
+}
+.resultContainerH1{
+    color: #cfc6ff;
+    font-size: 0.9375rem;
+    margin: 0.65rem;
+}
+.resultContainerItem{
+    margin: 1rem;
+}
+.scoreContainer
+{   
+    width: 8.5rem;
+    height: 8.5rem;
+    padding: 2.125rem;
+    border-radius: 50%;
+    background: var(--results-score-linear-gradient);
+}
+.scoreContainerHeader{
+    color: #ffffff;
+    font-size: 3rem;
+}
+.summaryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+}

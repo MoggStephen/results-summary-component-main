@@ -48,6 +48,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
+Estimated 2 hours due to not being too familiar with rem units for everything 20:50
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
