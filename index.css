@@ -66,8 +66,8 @@ body{
     justify-content: center;
     align-items: center;
 
-    border-radius: 0 0 1.25rem 1.25rem;
     background: var(--results-container-linear-gradient);
+    border-radius: 0 0 1.25rem 1.25rem;
     padding: 1rem;
 }
 .resultContainerH1{
@@ -81,12 +81,12 @@ body{
 }
 .scoreContainer
 {   
+    background: var(--results-score-linear-gradient);
     width: 9rem;
     height: 9rem;
     padding: 2.125rem;
     margin: 1rem;
     border-radius: 50%;
-    background: var(--results-score-linear-gradient);
 }
 .scoreContainerHeader{
     color: #ffffff;
@@ -102,8 +102,8 @@ body{
     color: #ffffff;
 }
 .scoreDescription{
-    margin: 0.3rem 1.5rem 1.3rem 1.5rem;
     color: #cfc6ff;
+    margin: 0.3rem 1.5rem 1.3rem 1.5rem;
 }
 
 /*SUMMARY CONTAINER*/
@@ -133,7 +133,6 @@ body{
 }
 .summaryAttributeContainer{
     display: flex;
-    flex-direction: row;
 
     padding: 0.9rem 0;
     border-radius: 0.5rem;
@@ -143,11 +142,16 @@ body{
     margin: 0.3rem;
 }
 .attribute{
-
+    font-weight: var(--font-weight-small);
 }
 .score{
+    color: var(--dark-gray-blue);
+    font-weight: var(--font-weight-medium);
     margin-left: auto;
-    
+}
+.outOf{
+    color: var(--light-lavender);
+    font-weight: var(--font-weight-medium);
 }
 .reactionContainer{
     background-color: var(--transparent-light-red);
@@ -169,9 +173,10 @@ body{
     background-color: var(--dark-gray-blue);
     border: 0;
     border-radius: 1.8rem;
+    padding: 1rem;
+    margin-top: 0.9rem;
+
     font-size: 1.1rem;
     font-weight: 500;
     color: white;
-    padding: 1rem;
-    margin-top: 0.9rem;
 }
