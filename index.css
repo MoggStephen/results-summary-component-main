@@ -27,9 +27,6 @@
     --light-lavender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
 
-    /*Use transparency to get the colour variations necessary to 
-    match the design. Hint: look into using `hsla()`.*/
-
     /*font stuff*/
     --font-size-score-container-header: 3.4rem;
     --font-size-main-container-item-header: 1.05rem;
@@ -39,6 +36,7 @@
     --font-weight-medium: 700;
     --font-weight-large: 800;
 
+    /*Random*/
     --score-description-side-margin: 2.5rem;
 }
 *{
@@ -108,7 +106,6 @@ html,body,.mainContainer{
 
 /*SUMMARY CONTAINER STYLES*/
 .summaryContainer{
-    /* align-items: flex-start; */
     padding: 1.6rem;
 }
 .summaryHeader{
@@ -149,10 +146,6 @@ html,body,.mainContainer{
 .attributeItem{
     padding: 1rem 0.8rem;
 }
-.icon{
-}
-.attribute{
-}
 .score{
     margin-left: auto;
     color: var(--dark-gray-blue);
@@ -172,7 +165,16 @@ html,body,.mainContainer{
     font-size: 1.1rem;
     font-weight: var(--font-weight-medium);
 }
-@media (min-width: 1440px) {
+.continueButton:hover{
+    background: var(--results-container-linear-gradient);
+    cursor: pointer;
+}
+.continueButton:focus{
+    background: var(--results-container-linear-gradient);
+    cursor: pointer;
+}
+/*Component can be displayed at 700px wide screen in desktop mode*/
+@media (min-width: 700px) {
     body{
         justify-content: center;
         align-items: center;
@@ -196,13 +198,13 @@ html,body,.mainContainer{
     .summaryHeader{
         margin: 0 0 1.4rem 0;
     }
-    .attributeItem{
-        padding: 0.8rem 0.3rem;
-    }
     .summaryAttributeContainer{
         padding: 0 0.4rem;
         font-size: 0.95rem;
         margin: 0 0 0.8rem 0;
+    }
+    .attributeItem{
+        padding: 0.8rem 0.3rem;
     }
     .continueButton{
         margin: 1.4rem 0 0 0;
