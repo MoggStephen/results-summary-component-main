@@ -31,11 +31,15 @@
     match the design. Hint: look into using `hsla()`.*/
 
     /*font stuff*/
-    --font-size-paragraph: 1.125rem;
+    --font-size-score-container-header: 3.4rem;
+    --font-size-main-container-item-header: 1.05rem;
+    --font-size-paragraph: 1rem;
     --font-family-hanken-grotesk: "Hanken Grotesk", sans-serif;
     --font-weight-small: 500;
     --font-weight-medium: 700;
     --font-weight-large: 800;
+
+    --score-description-side-margin: 2.5rem;
 }
 *{
     /*Boilerplate styles*/
@@ -46,138 +50,163 @@
 
     text-align: center;
 }
-body{
+html,body,.mainContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    
 }
 .mainContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+    width: auto;
+    height: auto;
+    background: var(--white);
 }
 .mainContainerItem{
-    padding: 1.4rem 2rem 2rem 2rem;
-}
-/*RESULT CONTAINER*/
-.resultContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    box-shadow: 1rem 0.8rem 0.8rem hsl(231, 62%, 96%);
+}
 
+/*RESULT CONTAINER STYLES*/
+.resultContainer{
     background: var(--results-container-linear-gradient);
-    border-radius: 0 0 1.25rem 1.25rem;
+    border-radius: 0 0 1.5rem 1.5rem;
 }
-.resultContainerH1{
+.resultHeader{
     color: var(--white);
-    font-size: 1.1rem;
-
-    margin: 0.6rem 0;
+    font-size: var(--font-size-main-container-item-header);
+    margin: 1.6rem;
 }
-.resultContainerItem{
-    
-}
-.scoreContainer
-{   
+.scoreContainer{
     background: var(--results-score-linear-gradient);
-    width: 9rem;
-    
-    padding: 2.125rem;
-    margin: 1rem;
+    padding: 1.4rem;
+    width: 15ch;
+    height: 15ch;
     border-radius: 50%;
 }
 .scoreContainerHeader{
     color: var(--white);
-    font-size: 3rem;
+    font-size: var(--font-size-score-container-header);
 }
 .scoreContainerParagraph{
     color: var(--light-lavender);
-    font-size: 0.9375rem; 
-}
+    font-size: var(--font-size-paragraph);
+}  
 .scoreAdjective{
-    margin: 0.3rem;
-    color: var(--pale-blue)
+    color: var(--white);
+    margin: 1.5rem 0 0 0;
 }
 .scoreDescription{
     color: var(--light-lavender);
-    margin: 0.3rem 1.5rem 1.3rem 1.5rem;
+    font-size: var(--font-size-paragraph);
+    margin: 0.7rem var(--score-description-side-margin) 2.5rem var(--score-description-side-margin);
 }
 
-/*SUMMARY CONTAINER*/
+/*SUMMARY CONTAINER STYLES*/
 .summaryContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-}
-.summaryContainerItem{
-
+    /* align-items: flex-start; */
+    padding: 1.6rem;
 }
 .summaryHeader{
     color: var(--dark-gray-blue);
-    font-size: 1.2rem;
+    font-size: var(--font-size-main-container-item-header);
+    font-weight: var(--font-weight-medium);
     align-self: flex-start;
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 1.7rem 0;
 }
 .summaryAttributesContainer{
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 .summaryAttributeContainer{
     display: flex;
-
-    padding: 0.9rem 0;
-    border-radius: 0.5rem;
-    margin: 0.5rem 0;
-}
-.summaryAttributeContainerItem{
-    margin: 0.3rem;
-}
-.attribute{
+    width: 100%;
+    margin: 0 0 1.2rem 0;
     font-weight: var(--font-weight-small);
-}
-.score{
-    color: var(--dark-gray-blue);
-    font-weight: var(--font-weight-medium);
-    margin-left: auto;
-}
-.outOf{
-    color: var(--light-lavender);
-    font-weight: var(--font-weight-medium);
+    border-radius: 0.8rem;
 }
 .reactionContainer{
-    background-color: var(--transparent-light-red);
     color: var(--light-red);
+    background: var(--transparent-light-red);
 }
 .memoryContainer{
-    background-color: var(--transparent-orangey-yellow);
     color: var(--orangey-yellow);
+    background: var(--transparent-orangey-yellow);
 }
 .verbalContainer{
-    background-color: var(--transparent-green-teal);
     color: var(--green-teal);
+    background: var(--transparent-green-teal);
 }
 .visualContainer{
-    background-color: var(--transparent-cobalt-blue);
     color: var(--cobalt-blue);
+    background: var(--transparent-cobalt-blue);
 }
-/*Continue button*/
+.attributeItem{
+    padding: 1rem 0.8rem;
+}
+.icon{
+}
+.attribute{
+}
+.score{
+    margin-left: auto;
+    color: var(--dark-gray-blue);
+    font-weight: var(--font-weight-large);
+}
+.outOf{
+    font-weight: var(--font-weight-small);
+}
 .continueButton{
-    background-color: var(--dark-gray-blue);
     border: 0;
-    border-radius: 1.9rem;
-    padding: 1rem;
-    margin-top: 0.9rem;
+    color: var(--white);
+    background: var(--dark-gray-blue);
+    border-radius: 2.4rem;
+    margin: 0.2rem 0 0 0;
     width: 100%;
-
+    padding: 1rem;
     font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--white)
+    font-weight: var(--font-weight-medium);
+}
+@media (min-width: 1440px) {
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+    .mainContainer{
+        flex-direction: row;
+    }
+    .resultContainer{
+        border-radius: 1.5rem;
+        width: 35ch;
+    }
+    .scoreContainer{
+        height: 18ch;
+        width: 18ch;
+        padding: 2rem;
+    }
+    .summaryContainer{
+        border-radius: 0 1.5rem 1.5rem 0;
+        width: 40ch;
+    }
+    .summaryHeader{
+        margin: 0 0 1.4rem 0;
+    }
+    .attributeItem{
+        padding: 0.8rem 0.3rem;
+    }
+    .summaryAttributeContainer{
+        padding: 0 0.4rem;
+        font-size: 0.95rem;
+        margin: 0 0 0.8rem 0;
+    }
+    .continueButton{
+        margin: 1.4rem 0 0 0;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
 }
